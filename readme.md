@@ -1,53 +1,65 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## WOC - Wami On Code Laravel Content Management System.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This is an implementation of Content Management System based on [Laravel 5.5](http://laravel.com/) and [Twitter Bootstrap 4](http://getbootstrap.com/)
 
-## About Laravel
+## Documentation
+Visit [Readme](https://lavalite.readme.io) for documentation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## System Requirements
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Lavalite is designed to run on a  machine with PHP 5.5.9 and MySQL 5.5.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+* PHP >= 7.0.0 With
+    * OpenSSL PHP Extension
+    * PDO PHP Extension
+    * Mbstring PHP Extension
+    * Tokenizer PHP Extension
+    * XML PHP Extension
+* [Composer](https://getcomposer.org) installed to load the dependencies of Lavalite.
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+Please check the system requirements before installing WOC.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+1. You may install by cloning from github, or via composer.
+  * Github:
+    * `git clone git@github.com:ddeshar/WamiOnCode.git`
+    * From a command line open in the folder, run `composer install`.
+  * Composer:
+    * `composer create-project ddeshar/WamiOnCode.git --prefer-dist website`
+2. Run the install command to get you started:
+   `php artisan WamiOnCode:install`
+4. You can configure mail server details in `config/mail.php`.
+5. You can configure the site in the config folder before production.
+6. Finally, setup an [Apache VirtualHost](http://httpd.apache.org/docs/current/vhosts/examples.html) to point to the "public" folder.
+  * For development, you can simply run `php artisan serve`
 
-## Laravel Sponsors
+####Permissions
+WOC may require one set of permissions to be configured: folders within `storage` require write access by the web server.
+For more detals on installation check laravel installation giude
+http://laravel.com/docs/5.5/installation
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+## Admin login details
+- Url: sites-public-url/admin
+- You can login with the superuser password provided at he time of installation.
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
+## Demo
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+##Frameworks/Libraries
 
-## Security Vulnerabilities
+### PHP Libraries
+* [laravel/laravel](https://github.com/laravel/laravel) - A PHP Framework For Web Artisans
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### Javascript Libraries
+* Updating
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Wami On Code CMS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Support 
+
+Make a donation to support the work of the Open Source Initiative.
+
+[DONATE](https://www.paypal.me)
