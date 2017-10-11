@@ -1,9 +1,18 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Font Awesome
+@import "node_modules/font-awesome/scss/font-awesome";
 
 // Variables
 @import "variables";
 
+// Bulma
+@import "node_modules/bulma/bulma";
+
+// Bulma Vue Modules
+@import "node_modules/buefy/src/scss/buefy";
+
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
