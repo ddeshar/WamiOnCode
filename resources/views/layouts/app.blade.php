@@ -14,74 +14,53 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar has-shadow">
-            <div class="container">
-
-                <div class="nav-left">
-                    <a class="nav-item" href="{{route('home')}}">
-                        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+    <nav class="navbar has-shadow">
+        <div class="container">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{{route('home')}}">
+                        <img src="{{ asset('images/devmarketer-logo.png') }}" alt="Bulma logo">
                     </a>
-                    <a class="nav-item is-tab is-hidden-mobile">Learn</a>
-                    <a class="nav-item is-tab is-hidden-mobile">Love</a>
-                    <a class="nav-item is-tab is-hidden-mobile">Share</a>
+                    <a class="navbar-item is-tab is-hidden-mobile">Learn</a>
+                    <a class="navbar-item is-tab is-hidden-mobile">Discuss</a>
+                    <a class="navbar-item is-tab is-hidden-mobile">Share</a>
                 </div>
 
             @if(Auth::guest())
-                <div class="nav-right">
-                    <a class="nav-item is-tab is-hidden-mobile">
+                <div class="navbar-end">
+                    <a href="{{route('login')}}" class="navbar-item is-tab is-hidden-mobile">
                         <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>&nbsp; Login
                     </a>
-                    <a class="nav-item is-tab is-hidden-mobile">
-                        <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp; Register
+                    <a href="{{route('register')}}" class="navbar-item is-tab is-hidden-mobile">
+                        <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp; Join the community
                     </a>
                 </div>
             @else
-                <div class="dropdown is-hoverable is-right">
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" href="#">
-                            <figure class="image is-24x24" style="margin-right: 8px;">
-                                <img src="http://bulma.io/images/jgthms.png">
-                            </figure> Chhy Riden
-                        </a>
-                    </div>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-content">
-                            <a class="dropdown-item" href="#">
-                                <i class="fa fa-globe fa-fw" aria-hidden="true"></i>&nbsp; View Sites
-                            </a>
-                            <a class="dropdown-item is-active" href="#">
-                                <i class="fa fa-bell fa-fw" aria-hidden="true"></i>&nbsp; Notifications
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fa fa-sliders fa-fw" aria-hidden="true"></i>&nbsp; Settings
-                            </a>
-                            <hr class="m-t-5 m-b-5">
-                            <a class="dropdown-item" href="#">
-                                <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp; Logout
-                            </a>
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item has-dropdown is-hoverable ">
+                            <span class="navbar-link" style="cursor: pointer;">User</span>
+                            <div class="navbar-dropdown is-right">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>&nbsp; View Sites
+                                </a>
+                                <a class="dropdown-item is-active" href="#">
+                                    <i class="fa fa-bell fa-fw" aria-hidden="true"></i>&nbsp; Notifications
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-sliders fa-fw" aria-hidden="true"></i>&nbsp; Settings
+                                </a>
+                                <hr class="m-t-5 m-b-5">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp; Logout
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            @endif
-
-
-    <div class="navbar-menu">
-        <div class="navbar-end">
-                <div class="navbar-item has-dropdown is-hoverable ">
-                    <span class="navbar-link" style="cursor: pointer;">User</span>
-                    <div class="navbar-dropdown is-right">
-                        <a class="navbar-item" href="/logout">
-                            Long text logout
-                        </a>
-                    </div>
-                </div>
+            @endif    
         </div>
-    </div>
-    
-            </div>
+    </nav>
 
-
-        </nav>
     <div id="app">
         @yield('content')
     </div>
