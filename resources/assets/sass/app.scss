@@ -19,5 +19,6 @@
 
 // custom SASS Pages
 @import "overrides"; // To override some files which already have in css framework such like table tabs(for our own custom css)
+@import "manage";
 @import "helpers"; // To ass some helpers css lines such as margint top etc
 @import "styles"; // Our general css style

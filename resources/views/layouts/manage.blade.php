@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Wami On Code</title>
+    <title>Wami On Code - Management</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,6 +16,8 @@
 <body>
 
     @include('layouts._includes.nav.main')
+
+    @include('layouts._includes.nav.manage')
 
     <div id="app">
         @yield('content')
