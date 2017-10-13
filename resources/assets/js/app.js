@@ -18,17 +18,9 @@ Vue.use(Buefy);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-//Vue.component('example', require('./components/Example.vue'));
+// Vue.component('example', require('./components/Example.vue'));
 
 // var app = new Vue({
 //   el: '#app',
 //   data: {}
 // });
-
-$(document).ready(function () {
-    //  Dropdowns
-    $('.dropdown').hover(function (e) {
-        $(this).toggleClass('is-open')
-    })
-})
-
